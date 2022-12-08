@@ -1,0 +1,146 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  text-rendering: optimizeSpeed;
+}
+
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+/* Custom Properties */
+:root {
+  /* colors */
+  --iro-400: hsl(359, 61%, 15%);
+  --iro-300: hsl(359, 41%, 26%);
+  --iro-200: hsl(359, 20%, 37%);
+  --iro-100: hsl(359, 60%, 50%);
+  --iro-shiroi: hsl(0, 0%, 100%);
+
+  /* fonts */
+  --ff-primary: "Sono", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  --fc-primary: var(--iro-shiroi);
+
+  --fw-extra-light: 200;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-semi-bold: 600;
+  --fw-extra-bold: 800;
+
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-24: 1.5rem;
+  --fs-36: 2.25rem;
+  --fs-48: 3rem;
+
+  --fs-primary-heading: var(--fs-48);
+  --fs-secondary-heading: var(--fs-36);
+  --fs-label: var(--fs-24);
+  --fs-body: var(--fs-16);
+  --fs-footer: var(--fs-12);
+  --fs-description: var(--fs-14);
+}
+/* utility classes */
+/* font utility */
+.fs-primary-heading {
+  font-size: var(--fs-primary-heading);
+}
+.fs-secondary-heading {
+  font-size: var(--fs-secondary-heading);
+}
+.fs-label {
+  font-size: var(--fs-label);
+}
+.fs-description {
+  font-size: var(--fs-description);
+}
+
+.fw-extra-light {
+  font-weight: var(--fw-extra-light);
+}
+.fw-light {
+  font-weight: var(--fw-light);
+}
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+.fw-extra-bold {
+  font-weight: var(--fw-extra-bold);
+}
+/* background utility */
+.bg-primary {
+  background-color: var(--iro-400);
+}
+.bg-secondary {
+  background-color: var(--iro-200);
+}
+.bg-gradient {
+  background-image: linear-gradient(var(--iro-400), var(--iro-200));
+}
+.bg-modal {
+  background-color: var(--iro-100);
+}
+/* general utility */
+.text-center {
+  text-align: center;
+}
+
+/* flex utility */
+.flex {
+  display: flex;
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+.flex-space {
+  justify-content: space-between;
+  align-items: center;
+}
+.gap-100 {
+  gap: 1rem;
+}
+
+/* general styling */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-regular);
+  color: var(--iro-shiroi);
+}
