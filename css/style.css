@@ -73,6 +73,12 @@ svg {
   --fs-footer: var(--fs-12);
   --fs-description: var(--fs-14);
 }
+
+/* pseudo elements */
+::backdrop {
+  --iro-backdrop: hsl(359, 61%, 15%);
+}
+
 /* utility classes */
 /* font utility */
 .fs-primary-heading {
@@ -117,6 +123,9 @@ svg {
 .text-center {
   text-align: center;
 }
+.padding-100 {
+  padding: 0.25rem;
+}
 
 /* flex utility */
 .flex {
@@ -129,6 +138,9 @@ svg {
 .flex-space {
   justify-content: space-between;
   align-items: center;
+}
+.flex-column {
+  flex-direction: column;
 }
 .gap-100 {
   gap: 1rem;
@@ -143,4 +155,50 @@ body {
   font-size: var(--fs-body);
   font-weight: var(--fw-regular);
   color: var(--iro-shiroi);
+}
+main {
+  height: 100%;
+}
+
+/* button styling */
+.button {
+  background-color: var(--iro-400);
+  color: var(--fc-primary);
+  text-align: center;
+  padding: 0.25em 0.25em;
+  border: none;
+  border-radius: 5px;
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: var(--iro-200);
+}
+.button:active {
+  background-color: var(--iro-300);
+}
+
+/* modals */
+.modal {
+  color: var(--iro-shiroi);
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 5px;
+}
+.modal::backdrop {
+  background: var(--iro-backdrop);
+  opacity: 0.5;
+}
+.modal-link {
+  text-decoration: none;
+  color: inherit;
+  font-family: inherit;
+  transition: all 750ms ease-in-out;
+}
+.modal-link:hover {
+  text-decoration: underline;
+  color: black;
 }
