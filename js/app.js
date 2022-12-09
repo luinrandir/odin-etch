@@ -9,3 +9,11 @@ aboutButton.addEventListener("click", () => {
 closeAbout.addEventListener("click", () => {
   aboutModal.close();
 });
+
+// Adding divs
+const canvas = document.getElementById("canvas");
+for (let i = 1; i <= 64 * 64; i++) {
+  const square = document.createElement("div");
+  square.className = "square";
+  canvas.appendChild(square);
+}

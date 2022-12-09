@@ -72,6 +72,9 @@ svg {
   --fs-body: var(--fs-16);
   --fs-footer: var(--fs-12);
   --fs-description: var(--fs-14);
+
+  /* canvas */
+  --square: 160px;
 }
 
 /* pseudo elements */
@@ -146,6 +149,30 @@ svg {
   gap: 1rem;
 }
 
+/* grid utility */
+.grid {
+  display: grid;
+}
+.grid-4x4 {
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+.grid-8x8 {
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+}
+.grid-16x16 {
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(16, 1fr);
+}
+.grid-32x32 {
+  grid-template-columns: repeat(32, 1fr);
+  grid-template-rows: repeat(32, 1fr);
+}
+.grid-64x64 {
+  grid-template-columns: repeat(64, 1fr);
+  grid-template-rows: repeat(64, 1fr);
+}
 /* general styling */
 body {
   display: flex;
@@ -158,6 +185,18 @@ body {
 }
 main {
   height: 100%;
+}
+
+/* application styling */
+.slate {
+  width: 600px;
+  height: 600px;
+}
+.square {
+  background-color: var(--iro-shiroi);
+}
+.square:hover {
+  background-color: black;
 }
 
 /* button styling */
