@@ -12,4 +12,4 @@ Digital Sketch is a simple JavaScript program that was written to accomplish a p
 
 ## Live Demo
 
-- [Live Demo of RPS](https://luinrandir.github.io/odin-etch/)
+- [Live Demo of Digital Sketch](https://luinrandir.github.io/odin-etch/)
