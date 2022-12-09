@@ -17,10 +17,20 @@
   <body>
     <header class="flex flex-space gap-100 bg-primary padding-100">
       <h1 class="fs-primary-heading fw-extra-bold">Digital Sketch</h1>
-      <button class="button" id="about-button">About</button>
+      <button class="button fs-label fw-semi-bold" id="about-button">About</button>
     </header>
-    <main class="bg-gradient">
-      <!-- <div id="canvas"></div> -->
+    <main class="bg-gradient flex flex-center gap-100">
+      <div class="tools flex flex-column flex-center gap-100">
+        <input type="color" id="color-choice" name="color-choice" >
+        <button class="button fs-label fw-semi-bold" id="rainbow">Rainbow Mode</button>
+        <button class="button fs-label fw-semi-bold" id="grid">Grid On</button>
+        <label class="fs-label fw-semi-bold" for="value" id="value-display"></label>
+        <input type="range" min="16" max="80" value="32" id="value">
+        <button class="button fs-label fw-semi-bold" id="clear">Clear</button>
+        <button class="button fs-label fw-semi-bold" id="reset">Reset</button>
+      </div>
+      <div class = "slate grid" id="canvas">
+      </div>
     </main>
     <footer
       class="flex flex-center gap-100 bg-secondary fw-extra-light padding-100"
